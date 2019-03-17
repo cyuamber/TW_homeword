@@ -31,7 +31,6 @@ export default class StatisticsItem extends Component {
       })
   }
   showAddItem = (index) => {
-      console.log(index,'==index')
       this.setState({ showaddItem: true, currentItem: index });
   }
   handleChildAdd = (str) => {
@@ -42,7 +41,8 @@ export default class StatisticsItem extends Component {
       const { popupText } = this.state;
       let str = popupText;
       let tempArr=str.split(',')
-      let additem = orignList.concat(tempArr);
+      let cleanArr = tempArr.filter(item => item.length > 0)
+      let additem = orignList.concat(cleanArr);
       allSource[originIndex].resources = additem;
       this.setState({
         resourceList: allSource
@@ -61,7 +61,7 @@ export default class StatisticsItem extends Component {
   render() {
       const { agents } = this.props;
       const {resourceList, showaddItem, currentItem} =  this.state;
-      console.log(currentItem,'==currentItem')
+      console.log(currentItem,'==currentItem',showaddItem,'==showaddItem')
       let showItem = agents.map((item, index)=>
         <div key = {index} className = "statistics-item">
             <div className = "statistics-item-icon">
@@ -76,7 +76,7 @@ export default class StatisticsItem extends Component {
                 </div>
                 <div className = "statistics-item-col-operation">
                     <div className = "statistics-item-col-operation-plusholder"><i className = "icon-plus" onClick = {()=>this.showAddItem(index)}></i></div>
-                        {currentItem === index ?
+                        { currentItem === index ?
                             <PopupDialogue
                                 showIndex ={ index }
                                 showModal = { showaddItem }
@@ -100,7 +100,6 @@ export default class StatisticsItem extends Component {
     return (
         <div>
             {showItem}
-            {/* <PopupDialogue showModal = {showaddItem}/> */}
         </div>
     );
   }

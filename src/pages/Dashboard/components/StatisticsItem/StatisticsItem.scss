@@ -55,12 +55,15 @@ $icon-tag-green: #7fbc39;
             display: flex;
             align-items: center;
             .statistics-item-col-operation-plusholder{
+                cursor: pointer;
                 width: 18px;
                 margin-right: 5px;
                 background: $icon-dark-green;
                 color: $icon-font-color;
                 text-align: center;
                 padding: 5px 15px 1px 5px;
+            }
+            .statistics-item-col-operation-plusholder:hover{
                 cursor: pointer;
             }
             .statistics-item-col-operation-container{

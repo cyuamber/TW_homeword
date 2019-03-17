@@ -10,18 +10,9 @@ export default class PopupDialogue extends Component {
         showDialogue: false
     };
   }
-  // componentWillReceiveProps (nextProps) {
-  //   const {showModal,showIndex} = nextProps;
-  //   console.log(this.props,nextProps,'========',showIndex)
-  //   // if (showModal !== this.props.showModal){
-  //     this.setState({
-  //       showDialogue: showModal
-  //     })
-  //   // }
-  // }
   componentWillMount () {
     const { showModal, showIndex } = this.props;
-    console.log(this.props,'========',showIndex)
+    console.log(this.props.showModal,'========',showIndex)
       this.setState({
         showDialogue: showModal
       })
@@ -30,6 +21,7 @@ export default class PopupDialogue extends Component {
       const { handleAddList } = this.props;
       handleAddList();
       this.handleDialogueClose();
+      this.handleDialogueText('');
   }
   handleDialogueClose(){
     this.setState({
