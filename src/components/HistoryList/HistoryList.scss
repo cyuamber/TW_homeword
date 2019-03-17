@@ -1,0 +1,37 @@
+.history-list{
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    .history-list-title{
+      color: #ccc;
+      font-size: 24px;
+      margin: 20px 20px 10px 10px;
+    }
+    .history-list-list{
+      color: #999;
+      font-size: 12px;
+      list-style-type: disc;
+      margin-right: 10px;
+      margin-bottom: 30px;
+      .history-list-item{
+        // margin-left: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 2;
+      }
+      .history-list-item:hover{
+          cursor: pointer;
+          color: #00b4cf;
+      }
+      .history-list-item::before{
+        content: " ";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        margin: 0 15px;
+        border-radius: 50%;
+        background: #999;
+      }
+    }
+  }

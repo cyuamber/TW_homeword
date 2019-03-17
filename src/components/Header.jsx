@@ -54,7 +54,6 @@ export default class Header extends PureComponent {
           {/* Header 菜单项 end */}
 
           {/* Header 右侧内容块 */}
-
           <Balloon
             trigger={
               <div
@@ -71,7 +70,6 @@ export default class Header extends PureComponent {
                   src="https://img.alicdn.com/tfs/TB1L6tBXQyWBuNjy0FpXXassXXa-80-80.png"
                   className="user-avatar"
                 />
-
                 {/* <Icon
                   type="arrow-down-filling"
                   size="xxs"
@@ -79,18 +77,19 @@ export default class Header extends PureComponent {
                 /> */}
               </div>
             }
+            offset = {[-70,0]}
             closable={false}
             className="user-profile-menu"
           >
             <ul>
               <li className="user-profile-menu-item">
                 <Link to="/">
-                  <FoundationSymbol type="person" size="small" />Profile
+                  <i className="icon-id-card"></i>Profile
                 </Link>
               </li>
               <li className="user-profile-menu-item">
-                <Link to="/login">
-                  <FoundationSymbol type="compass" size="small" />Sign out
+                <Link to="/">
+                  <i className="icon-sign-in"></i>Sign out
                 </Link>
               </li>
             </ul>

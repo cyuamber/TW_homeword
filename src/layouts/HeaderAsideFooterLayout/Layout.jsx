@@ -8,8 +8,9 @@ import { Link } from 'react-router';
 import FoundationSymbol from 'foundation-symbol';
 import { enquire } from 'enquire-js';
 import Header from './../../components/Header';
-import Footer from './../../components/Footer';
 import Logo from './../../components/Logo';
+import HistoryList from '../../components/HistoryList/HistoryList';
+
 import { asideNavs } from './../../navs';
 import './scss/light.scss';
 import './scss/dark.scss';
@@ -205,12 +206,13 @@ export default class HeaderAsideFooterResponsiveLayout extends Component {
                   );
                 })}
             </Menu>
+            <HistoryList/>
+            {/* {HistoryList} */}
             {/* 侧边菜单项 end */}
           </Layout.Aside>
           {/* 主体内容 */}
           <Layout.Main>{this.props.children}</Layout.Main>
         </Layout.Section>
-        <Footer />
       </Layout>
     );
   }

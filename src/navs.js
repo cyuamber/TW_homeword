@@ -9,24 +9,24 @@ const customHeaderNavs = [
 
 const customAsideNavs = [
   {
-    text: 'DASHBOARD',
+    text: <span><i className = "icon-dashboard nav-icon"></i>DASHBOARD</span>,
     to: '/',
-    icon: 'home',
+    icon:'',
   },
   {
-    text: 'AGENT',
+    text: <span><i className = "icon-sitemap nav-icon"></i>AGENT</span>,
     to: '/agent',
-    icon: 'home',
+    icon: '',
   },
   {
-    text: 'MY CRUISE',
+    text: <span><i className = "icon-boat nav-icon"></i>MY CRUISE</span>,
     to: '/mycurise',
-    icon: 'home',
+    icon: '',
   },
   {
-    text: 'HELP',
+    text: <span><i className = "icon-life-bouy nav-icon"></i>HELP</span>,
     to: '/help',
-    icon: 'home',
+    icon: '',
   },
 ];
 

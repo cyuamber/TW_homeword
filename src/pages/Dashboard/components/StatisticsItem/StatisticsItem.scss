@@ -1,0 +1,97 @@
+$icon-light-green: #00b4cf;
+$icon-dark-green: #01869a;
+$icon-font-color: #ffffff;
+$icon-tag-orange: #ff9a2a;
+$icon-tag-green: #7fbc39;
+
+.statistics-item{
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    .statistics-item-icon{
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+    .statistics-item-col{
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        .statistics-item-col-info{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            .statistics-item-col-info-item{
+                margin: 0 5px;
+                .green-text{
+                    color: $icon-light-green;
+                    font-weight: bold;
+                }
+                .right-text{
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+            .tag{
+                margin: 0 10px;
+                color: $icon-font-color;
+                font-weight: bold;
+                font-size: 14px;
+                padding: 3px 5px;
+            }
+            .tag-orange{
+                background: $icon-tag-orange;
+            }
+            .tag-green{
+                background: $icon-tag-green;
+            }
+            .big-icon{
+                font-size: 16px;
+            }
+        }
+        .statistics-item-col-operation{
+            display: flex;
+            align-items: center;
+            .statistics-item-col-operation-plusholder{
+                width: 18px;
+                margin-right: 5px;
+                background: $icon-dark-green;
+                color: $icon-font-color;
+                text-align: center;
+                padding: 5px 15px 1px 5px;
+                cursor: pointer;
+            }
+            .statistics-item-col-operation-container{
+                width: 750px;
+                color: #2d4054;
+                .statistics-item-col-operation-icon{
+                    display: inline-block;
+                    background: #efefef;
+                    margin: 5px 10px;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    .small-text{
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .statistics-item-col-operation-deny{
+                height: 30px;
+                color: $icon-font-color;
+                background: $icon-dark-green;
+                line-height: 1.5;
+                padding: 5px 10px;
+                font-weight: bold;
+                cursor: pointer;
+                .right-text{
+                    margin-left: 5px;
+                }
+
+            }
+
+        }
+    }
+}

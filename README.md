@@ -1,4 +1,4 @@
-# ice-scaffold-cms
+# xuran_TW's homework
 
 > 使用文档
 
@@ -15,7 +15,4 @@
 * 路由配置: `src/routes.jsx`
 * 页面文件: `src/pages`
 * 组件: `src/components`
-
-效果图:
-
-![screenshot](https://img.alicdn.com/tfs/TB1NKRzdY9YBuNjy0FgXXcxcXXa-1920-1080.png)
+* 资源文件: `src/assets`

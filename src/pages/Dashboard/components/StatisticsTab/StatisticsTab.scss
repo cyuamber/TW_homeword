@@ -1,0 +1,28 @@
+.statistics-tab{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    height: 50px;
+    .statistics-tab-filter{
+        height: 100%;
+        display: flex;
+        .statistics-tab-filter-item{
+            margin: 15px 20px;
+            cursor: pointer;
+        }
+    }
+    .statistics-tab-filter-search{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+        .statistics-tab-filter-icon{
+            margin: 0 10px;
+            font-size: 20px;
+        }
+        .statistics-tab-filter-icon:hover{
+            color: #0084cf;
+            cursor: pointer;
+        }
+    }
+}
