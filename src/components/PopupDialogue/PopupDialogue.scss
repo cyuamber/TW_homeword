@@ -1,0 +1,51 @@
+$button-light-green: #00b4cf;
+$button-dark-green: #01869a;
+$button-dark-bg:#2d4054;
+.popup-dialogue{
+    width: 570px;
+    position: absolute;
+    // left: 32%;
+    // bottom: -50%;
+    z-index: 99999;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid $button-light-green;
+    box-shadow: 0 3px 5px (#000 30%);
+    .popup-dialogue-close{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        color: $button-light-green;
+    }
+    .popup-dialogue-description{
+
+    }
+    .popup-dialogue-input{
+        width: 100%;
+        height: 30px;
+        margin: 15px 0;
+    }
+    .popup-dialogue-buttongroup{
+        display: flex;
+        .button{
+            height: 30px;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .popup-dialogue-buttongroup-add{
+            background: $button-light-green;
+
+        }
+        .popup-dialogue-buttongroup-cancel{
+            min-width: 100px;
+            margin-left: 20px;
+            background: $button-dark-bg;
+
+        }
+    }
+
+}

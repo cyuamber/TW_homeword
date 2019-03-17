@@ -17,7 +17,6 @@ export default class RealTimeStatistics extends Component {
 
   render() {
     const { sumNum } = this.props;
-    console.log(sumNum,'===sumNum')
     return (
       <Row wrap gutter="20" justify='space-between'>
         <Col xxs="20" s="12" l="8">
@@ -99,10 +98,6 @@ const styles = {
     top: 50,
     fontSize: '48px',
   },
-  itemNum: {
-    margin: '16px 0',
-    fontSize: '32px',
-  },
   itemStatic: {
     textAlign: 'center',
     background: '#ffffff',
@@ -126,14 +121,5 @@ const styles = {
   },
   green: {
     background: '#7fbc39',
-  },
-  lightBlue: {
-    background: '#38A1F2',
-  },
-  darkBlue: {
-    background: '#7538C7',
-  },
-  navyBlue: {
-    background: '#3B67A4',
   },
 };

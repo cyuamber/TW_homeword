@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Grid } from '@icedesign/base';
-import ItemIcon from '../../../../components/ItemIcon'
+import ItemIcon from '../../../../components/ItemIcon';
+import PopupDialogue from '../../../../components/PopupDialogue';
+
 
 import './StatisticsItem.scss';
 
@@ -16,7 +18,10 @@ export default class StatisticsItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        resourceList: []
+        resourceList: [],
+        showaddItem: false,
+        currentItem: 0,
+        popupText: ''
     };
   }
   componentWillReceiveProps(nextProps){
@@ -25,8 +30,17 @@ export default class StatisticsItem extends Component {
         resourceList: agents
       })
   }
-  addItem = (allSource, orignList, originIndex) => {
-      let str = 'chrome,test';
+  showAddItem = (index) => {
+      console.log(index,'==index')
+      this.setState({ showaddItem: true, currentItem: index });
+  }
+  handleChildAdd = (str) => {
+      this.setState({ popupText: str })
+
+  }
+  addItem = ( allSource, orignList, originIndex) => {
+      const { popupText } = this.state;
+      let str = popupText;
       let tempArr=str.split(',')
       let additem = orignList.concat(tempArr);
       allSource[originIndex].resources = additem;
@@ -46,7 +60,8 @@ export default class StatisticsItem extends Component {
 
   render() {
       const { agents } = this.props;
-      const {resourceList} =  this.state;
+      const {resourceList, showaddItem, currentItem} =  this.state;
+      console.log(currentItem,'==currentItem')
       let showItem = agents.map((item, index)=>
         <div key = {index} className = "statistics-item">
             <div className = "statistics-item-icon">
@@ -60,7 +75,15 @@ export default class StatisticsItem extends Component {
                     <div className = "statistics-item-col-info-item"><i className = "icon-folder big-icon"></i><span className="right-text">{item.location}</span></div>
                 </div>
                 <div className = "statistics-item-col-operation">
-                    <div className = "statistics-item-col-operation-plusholder"><i className = "icon-plus" onClick = {()=>this.addItem(agents,resourceList[index].resources,index)}></i></div>
+                    <div className = "statistics-item-col-operation-plusholder"><i className = "icon-plus" onClick = {()=>this.showAddItem(index)}></i></div>
+                        {currentItem === index ?
+                            <PopupDialogue
+                                showIndex ={ index }
+                                showModal = { showaddItem }
+                                handleAddStr = {(str)=>this.handleChildAdd(str)}
+                                handleAddList = {()=>this.addItem(agents,resourceList[index].resources,index)}
+                            /> : null
+                        }
                     <div className = "statistics-item-col-operation-container">
                         {resourceList[index].resources.map((resource,t)=>{
                             return <div key = {t+1} className = "statistics-item-col-operation-icon"><div className = "small-text">{resource}</div><i className = "icon-trash" onClick = {()=>this.deleteItem(agents,resourceList[index].resources,t,index)}></i></div>
@@ -75,7 +98,10 @@ export default class StatisticsItem extends Component {
         </div>
       )
     return (
-        <div> {showItem}</div>
+        <div>
+            {showItem}
+            {/* <PopupDialogue showModal = {showaddItem}/> */}
+        </div>
     );
   }
 }

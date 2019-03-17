@@ -29,7 +29,6 @@ export default class Dashboard extends Component {
       .get('/mock/table-list.json')
       .then((response) => {
         if(!response.data.errno === 0) return
-        console.log(response.data.data.agents,'==')
         let totalNum = response.data.data.agents.length;
         let idleNum = 0;
         let buildingNum = 0;
