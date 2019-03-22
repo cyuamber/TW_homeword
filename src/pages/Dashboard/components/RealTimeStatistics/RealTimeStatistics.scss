@@ -1,0 +1,64 @@
+    .itemBody {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      color: #fff;
+      height: 144px;
+      .itemBackgroundIcon {
+        position: absolute;
+        top: 73px;
+        opacity: 0.2;
+        font-size: 165px;
+        margin-left: 3%;
+        .rotateIcon{
+            display: inline-block;
+            animation: rotateCog 30s linear infinite;
+            animation-timing-function: 2s;
+        }
+      };
+      .itemTitle {
+        position: relative;
+        .titleText {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+          };
+          .titleNum {
+            position: absolute;
+            right: 0;
+            top: 50px;
+            font-size: 48px;
+          };
+      };
+    };
+    .itemStatic {
+        text-align: center;
+        background: #ffffff;
+        color: #2d4054;
+        .itemRow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .itemStaticstic {
+                margin-top: 48px;
+                font-size: 20px;
+            };
+            .desc {
+                margin: 0;
+                margin-top: 5px;
+                font-size: 12px;
+            };
+        };
+    };
+    .orange{
+        background: #ff9a2a;
+    };
+    .green {
+        background: #7fbc39;
+    };
+    @keyframes rotateCog{
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+
+

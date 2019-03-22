@@ -7,8 +7,19 @@
         height: 100%;
         display: flex;
         .statistics-tab-filter-item{
-            margin: 15px 20px;
+            padding: 15px 20px;
             cursor: pointer;
+            height: 100%;
+        }
+        .statistics-tab-filter-item:hover{
+            color: #0084cf;
+            font-weight: bold;
+            border-bottom: 2px solid #0084cf;
+        }
+        .visited{
+            color: #0084cf;
+            font-weight: bold;
+            border-bottom: 2px solid #0084cf;
         }
     }
     .statistics-tab-filter-search{

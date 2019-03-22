@@ -18,10 +18,11 @@ $icon-tag-green: #7fbc39;
     .statistics-item-col{
         display: flex;
         flex-direction: column;
+        width: 100%;
         font-size: 14px;
         .statistics-item-col-info{
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             margin-bottom: 20px;
             .statistics-item-col-info-item{
                 margin: 0 5px;
@@ -54,6 +55,7 @@ $icon-tag-green: #7fbc39;
         .statistics-item-col-operation{
             display: flex;
             align-items: center;
+            position: relative;
             .statistics-item-col-operation-plusholder{
                 cursor: pointer;
                 width: 18px;

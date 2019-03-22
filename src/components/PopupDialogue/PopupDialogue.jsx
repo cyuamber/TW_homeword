@@ -10,13 +10,32 @@ export default class PopupDialogue extends Component {
         showDialogue: false
     };
   }
-  componentWillMount () {
-    const { showModal, showIndex } = this.props;
-    console.log(this.props.showModal,'========',showIndex)
+  componentWillReceiveProps(nextProps,nextState){
+    const { showModal } = nextProps;
+    const { showDialogue } = this.state;
+    console.log(showModal,'====nextprops')
+    // console.log(this.props.showModal,showModal !== this.props.showModal,'====this.props')
+    console.log(showDialogue,'===showDialogue',nextState)
+    if(showModal !== this.props.showModal){
       this.setState({
         showDialogue: showModal
       })
+    }
   }
+  // shouldComponentUpdate(nextProps,nextState){
+  //   const { showModal } = nextProps;
+  //   const {showDialogue} = nextState;
+  //   console.log(showModal, showDialogue,'nextstate',this.state.showDialogue,'this.state','===should')
+  //   if(nextState.showDialogue !== this.state.showDialogue){
+  //     console.log(showModal,'===showModal')
+  //     this.setState({
+  //       showDialogue: showModal
+  //     })
+  //     return false
+  //   }
+  //   return false
+  // }
+
   handleDialogueAdd(){
       const { handleAddList } = this.props;
       handleAddList();
@@ -24,6 +43,7 @@ export default class PopupDialogue extends Component {
       this.handleDialogueText('');
   }
   handleDialogueClose(){
+    console.log('===handleclose')
     this.setState({
         showDialogue: false
     })
@@ -35,6 +55,7 @@ export default class PopupDialogue extends Component {
 
   render() {
     const { showDialogue } = this.state;
+    console.log('===render')
     return (
         <div>
             {showDialogue && <div className = "popup-dialogue">

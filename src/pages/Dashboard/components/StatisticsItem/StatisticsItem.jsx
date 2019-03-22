@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { Grid } from '@icedesign/base';
 import ItemIcon from '../../../../components/ItemIcon';
 import PopupDialogue from '../../../../components/PopupDialogue';
 
 
 import './StatisticsItem.scss';
-
-const { Row, Col } = Grid;
 
 export default class StatisticsItem extends Component {
   static displayName = 'StatisticsItem';
@@ -76,7 +73,7 @@ export default class StatisticsItem extends Component {
                 </div>
                 <div className = "statistics-item-col-operation">
                     <div className = "statistics-item-col-operation-plusholder"><i className = "icon-plus" onClick = {()=>this.showAddItem(index)}></i></div>
-                        { currentItem === index ?
+                        { currentItem == index ?
                             <PopupDialogue
                                 showIndex ={ index }
                                 showModal = { showaddItem }
