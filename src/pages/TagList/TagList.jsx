@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import TabTable from './components/TabTable';
 

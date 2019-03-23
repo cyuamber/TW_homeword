@@ -6,6 +6,7 @@
 
 命令行:
 
+* 安装服务依赖包: `npm install`
 * 启动调试服务: `npm start`
 * 构建 dist: `npm run build`
 
@@ -27,4 +28,3 @@
 * http://localhost:3333
 
 TODO:
-* 由于本业务交互简单，因此未引入redux等状态管理工具，如果遇到复杂状态变更，需要添加

@@ -24,7 +24,15 @@
     "node-sass": "^4.11.0",
     "prop-types": "^15.5.8",
     "react-document-title": "^2.0.3",
+    "react-dom": "^16.8.5",
+    "react-redux": "5.0.6",
     "react-router": "^3.2.0",
+    "react-router-redux": "^4.0.4",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.4",
+    "redbox-react": "^1.2.3",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.3.0",
     "slate": "^0.32.5",
     "slate-plain-serializer": "^0.5.6",
     "slate-react": "^0.11.6"
@@ -61,5 +69,5 @@
     "theme": "light",
     "primaryColor": "#1c8af2"
   },
-  "title": "Feibing"
+  "title": "TW_homework"
 }
