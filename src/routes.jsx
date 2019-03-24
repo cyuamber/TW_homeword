@@ -9,7 +9,6 @@ import {
 import { Provider } from 'react-redux';
 import store from './store'
 
-// 路由配置规则参考： https://github.com/ReactTraining/react-router/blob/v3/docs/guides/RouteConfiguration.md#configuration-with-plain-routes
 import HeaderAsideFooterLayout from './layouts/HeaderAsideFooterLayout';
 import Dashboard from './pages/Dashboard';
 import CateList from './pages/CateList';
