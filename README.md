@@ -6,9 +6,9 @@
 
 命令行:
 
-* 安装服务依赖包: `npm install`
-* 启动调试服务: `npm start`
-* 构建 dist: `npm run build`
+* 启动前请安装服务依赖包: `npm install`
+* 启动本地服务: `npm run start`
+* 构建 dist 包: `npm run build`
 
 基础设施:
 
@@ -25,7 +25,7 @@
 
 本地服务地址：
 
-* http://${localIp}:3333
+* http://${Local_IP_Address }:3333
 * http://localhost:3333
 
 TODO:
