@@ -1,3 +1,7 @@
+$icon-light-green: #00b4cf;
+$icon-dark-green: #01869a;
+$icon-hover-blue:#0084cf;
+
 .statistics-tab{
     display: flex;
     align-items: center;
@@ -10,16 +14,17 @@
             padding: 15px 20px;
             cursor: pointer;
             height: 100%;
+            border-right: 1px solid #e1e4e6;
         }
         .statistics-tab-filter-item:hover{
-            color: #0084cf;
+            color: $icon-light-green;
             font-weight: bold;
-            border-bottom: 2px solid #0084cf;
+            border-bottom: 2px solid $icon-light-green;
         }
         .visited{
-            color: #0084cf;
+            color: $icon-light-green;
             font-weight: bold;
-            border-bottom: 2px solid #0084cf;
+            border-bottom: 2px solid $icon-light-green;
         }
     }
     .statistics-tab-filter-search{
@@ -32,7 +37,7 @@
             font-size: 20px;
         }
         .statistics-tab-filter-icon:hover{
-            color: #0084cf;
+            color: $icon-light-green;
             cursor: pointer;
         }
     }

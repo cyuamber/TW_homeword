@@ -24,21 +24,21 @@ export default class Dashboard extends Component {
       }
     };
   }
-  componentDidMount () {
+  componentDidMount() {
     axios
       .get('/mock/table-list.json')
       .then((response) => {
-        if(!response.data.errno === 0) return
+        if (!response.data.errno === 0) return
         let totalNum = response.data.data.agents.length;
         let idleNum = 0;
         let buildingNum = 0;
         let physicalNum = 0;
         let virtualNum = 0;
-        response.data.data.agents.map(item=>{
-          if(item.status === "idle"){
+        response.data.data.agents.map(item => {
+          if (item.status === "idle") {
             idleNum++;
           }
-          if(item.status === "building"){
+          if (item.status === "building") {
             buildingNum++;
           }
           if (item.type === "physical") {
@@ -49,14 +49,14 @@ export default class Dashboard extends Component {
           }
         })
         this.setState({
-            agents: response.data.data.agents,
-            sumNum: {
-              total: totalNum,
-              idle: idleNum,
-              building: buildingNum,
-              physical: physicalNum,
-              virtual: virtualNum,
-            }
+          agents: response.data.data.agents,
+          sumNum: {
+            total: totalNum,
+            idle: idleNum,
+            building: buildingNum,
+            physical: physicalNum,
+            virtual: virtualNum,
+          }
         });
       })
       .catch((error) => {
@@ -68,9 +68,9 @@ export default class Dashboard extends Component {
     const { agents, sumNum } = this.state;
     return (
       <div className="dashboard-page">
-        <RealTimeStatistics agents = { agents } sumNum = { sumNum }/>
+        <RealTimeStatistics agents={agents} sumNum={sumNum} />
         <StatisticsTab agents={agents} />
-        <StatisticsItem agents={agents}/>
+        <StatisticsItem agents={agents} />
       </div>
     );
   }

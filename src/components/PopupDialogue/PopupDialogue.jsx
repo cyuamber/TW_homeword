@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Input } from '@alifd/next';
 import { connect } from 'react-redux';
-import action from '../../store/action';
+import action from '../../../src/pages/Dashboard/store/action';
 import './PopupDialogue.scss';
 
 export default class PopupDialogue extends Component {
