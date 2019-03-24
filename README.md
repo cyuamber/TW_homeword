@@ -21,6 +21,7 @@
 * 页面框架: `src/layouts`
 * 资源文件: `assets/`
 * mock数据: `mock/`
+* 公共store配置路径: `src/store`
 
 本地服务地址：
 
@@ -28,3 +29,9 @@
 * http://localhost:3333
 
 TODO:
+
+* Tab栏的搜索筛选功能、搜索功能以及切换视图功能
+* List项的翻页功能
+* UI细节调整
+* 移动端页面适配
+
